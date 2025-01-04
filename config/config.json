@@ -2,7 +2,15 @@
   "enable": true,
   "list": [
     "56eabcd4d2720b66698b4574",
-    "59e68f6f86f7746c9f75e846"
+    "59e68f6f86f7746c9f75e846",
+    "59db7e1086f77448be30ddf3",
+    "59db7eed86f77461f8380365"
+  ],
+  "listEnglish": [
+    "556 ar-15 low profile mount",
+    "m856",
+    "acog",
+    "acog mount"
   ],
   "debug": false
 }

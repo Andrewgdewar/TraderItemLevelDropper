@@ -1,9 +1,5 @@
 import { DependencyContainer } from "tsyringe";
-import { ConfigServer } from "@spt/servers/ConfigServer";
-import { IBotConfig } from "@spt/models/spt/config/IBotConfig";
-import { ConfigTypes } from "@spt/models/enums/ConfigTypes";
 import { DatabaseServer } from "@spt/servers/DatabaseServer";
-import { ProfileHelper } from "@spt/helpers/ProfileHelper";
 import config from "../../config/config.json";
 
 export const ItemChanger = (container: DependencyContainer): undefined => {
@@ -20,7 +16,13 @@ export const ItemChanger = (container: DependencyContainer): undefined => {
           parentId === "hideout" &&
           tables.traders[key].assort.loyal_level_items[_id] > 1
         ) {
-          // console.log(_tpl)
+          if (config.debug) {
+            console.log(
+              "Updating a reference to",
+              config.listEnglish[config.list.findIndex((id) => _tpl === id)],
+              _id
+            );
+          }
           tables.traders[key].assort.loyal_level_items[_id] =
             tables.traders[key].assort.loyal_level_items[_id] - 1;
         }
