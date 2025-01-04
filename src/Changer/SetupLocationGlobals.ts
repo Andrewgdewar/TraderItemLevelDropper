@@ -20,7 +20,7 @@ export const ItemChanger = (container: DependencyContainer): undefined => {
           parentId === "hideout" &&
           tables.traders[key].assort.loyal_level_items[_id] > 1
         ) {
-          console.log(_tpl)
+          // console.log(_tpl)
           tables.traders[key].assort.loyal_level_items[_id] =
             tables.traders[key].assort.loyal_level_items[_id] - 1;
         }
